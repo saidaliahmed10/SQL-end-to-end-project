@@ -130,9 +130,27 @@ select*
 from target_db.geolocation
 limit 5;
 ```
+#### The time range between which the orders where placed 
 
+```sql
+select
+min(order_purchase_timestamp) as start_time, 
+max(order_purchase_timestamp) as end_time
+from target_db.orders;
+-- the time range which orders where place: 2016-09-04 21:15:19	2018-10-17 17:30:18
+```
 
+#### Display the details  cities and states of customers who ordered during the given period.
 
+```sql
+select 
+c.customer_city, c.customer_state
+from orders as o 
+join customers as c
+on o.customer_id= c.customer_id
+where extract(Year from o.order_purchase_timestamp)= 2018
+and extract( month from order_purchase_timestamp) between 1 and 3;
+```
   
 
 
