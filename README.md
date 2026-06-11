@@ -50,6 +50,22 @@ The primary objective is to evaluate logistics performance, customer satisfactio
 | geolocation_lat | Latitude coordinate of the location|
 | geolocation_city |City where the location is located|
 
+
+###  order_items
+| Feature | Description |
+|----------|-------------|
+| order_id |  Unique identifier for each order|
+| order_item_id | Identifier for each item within an order|
+| product_id |  Unique identifier for a product |
+| seller_id |Unique identifier for the seller|
+| shipping_limit_date |City where the location is located|
+| price |Cost of the product (excluding shipping)|
+| freight_value |Shipping cost for the item|
+
+
+
+
+
 	
 
 
