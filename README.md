@@ -73,6 +73,18 @@ The primary objective is to evaluate logistics performance, customer satisfactio
 | review_creation_date | Date when the review was created |
 | review_answer_timestamp | Date and time when the review was submitted or recorded |
 
+### orders
+| Feature | Description |
+|----------|-------------|
+| order_id | Unique identifier for each order |
+| customer_id | Unique identifier for the customer |
+| order_status | Current status of the order |
+| order_purchase_timestamp | Date and time when the order was placed |
+| order_approved_at | Date and time when the order was approved |
+| order_delivered_carrier_date | Date and time when the order was handed to the carrier |
+| order_delivered_customer_date | Date and time when the order was delivered to the customer |
+| order_estimated_delivery_date | Estimated delivery date for the order |
+
 
 
 
