@@ -151,7 +151,19 @@ on o.customer_id= c.customer_id
 where extract(Year from o.order_purchase_timestamp)= 2018
 and extract( month from order_purchase_timestamp) between 1 and 3;
 ```
-  
+#### is there a growing trend in the number of orders placed over the past years?
+```sql
+SELECT
+    EXTRACT(MONTH FROM order_purchase_timestamp) AS month,
+    COUNT(order_id) AS order_number
+FROM orders
+GROUP BY EXTRACT(MONTH FROM order_purchase_timestamp)
+ORDER BY order_number DESC;
+--- The highest number of orders occurred in August (10,843 orders).
+---The lowest number of orders occurred in September (4,305 orders).
+---Overall, order activity is higher in mid-year months (May–August) and drops toward the end of the
+```
+
 
 
 
