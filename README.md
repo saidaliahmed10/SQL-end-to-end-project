@@ -63,6 +63,16 @@ The primary objective is to evaluate logistics performance, customer satisfactio
 | freight_value |Shipping cost for the item|
 
 
+### Order_reviews
+| Feature | Description |
+|----------|-------------|
+| review_id | Unique identifier for each review |
+| order_id | Identifier of the order associated with the review |
+| review_score | Customer rating given to the order |
+| review_comment_title | Title of the customer's review |
+| review_creation_date | Date when the review was created |
+| review_answer_timestamp | Date and time when the review was submitted or recorded |
+
 
 
 
