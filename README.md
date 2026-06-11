@@ -115,6 +115,12 @@ The primary objective is to evaluate logistics performance, customer satisfactio
 | seller_city | City where the seller is located |
 | seller_state | State where the seller is located |
 
+### 🛠 Tools Used
+- MySQL – Used for data storage, querying, and analysis.
+
+
+  
+
 
 
 
