@@ -94,6 +94,8 @@ The primary objective is to evaluate logistics performance, customer satisfactio
 | payment_installments | Number of installments used for the payment |
 | payment_value | Total amount paid for the order |
 
+### 
+
 
 
 
