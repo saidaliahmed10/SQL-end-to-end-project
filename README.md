@@ -31,7 +31,26 @@ The primary objective is to evaluate logistics performance, customer satisfactio
 
 - Installment Analysis: What is the distribution of orders based on the number of payment installments selected by customers?
 
-## 📄 Dataset Description
+## 📄 Dataset Dataset Features
+### Customers
+| Feature | Description |
+|----------|-------------|
+| order_id | Unique identifier of the order |
+| customer_id | Unique identifier of the customer transaction |
+| customer_zip_code_prefix | Postal area code of the customer |
+| customer_city | City where the customer is located |
+| customer_state | State where the customer is located |
+
+###  Geolocation
+| Feature | Description |
+|----------|-------------|
+| eolocation_zip_code_prefix | Postal area code used for geographic grouping |
+| geolocation_state | State where the location is located|
+| geolocation_lng | Longitude coordinate of the location |
+| geolocation_lat | Latitude coordinate of the location|
+| geolocation_city |City where the location is located|
+
+	
 
 
 
