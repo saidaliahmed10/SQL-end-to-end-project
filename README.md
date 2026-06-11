@@ -121,7 +121,7 @@ The primary objective is to evaluate logistics performance, customer satisfactio
 
 ## SQL Analysis and Queries 
 
-#### checking the structure and characters of the dataset(customers& geolocations
+#### checking the structure and characters of the dataset(customers& geolocations)
 ```sql
 select*
 from target_db.customers
