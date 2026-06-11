@@ -85,6 +85,15 @@ The primary objective is to evaluate logistics performance, customer satisfactio
 | order_delivered_customer_date | Date and time when the order was delivered to the customer |
 | order_estimated_delivery_date | Estimated delivery date for the order |
 
+### payments
+| Feature | Description |
+|----------|-------------|
+| order_id | Unique identifier for each order |
+| payment_sequential | Sequence number of the payment for an order |
+| payment_type | Method used to pay for the order |
+| payment_installments | Number of installments used for the payment |
+| payment_value | Total amount paid for the order |
+
 
 
 
