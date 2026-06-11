@@ -30,3 +30,15 @@ The primary objective is to evaluate logistics performance, customer satisfactio
 - Financial Insights: How does the preference for payment methods (e.g., credit card, boleto) shift month-over-month?
 
 - Installment Analysis: What is the distribution of orders based on the number of payment installments selected by customers?
+
+## 📄 Dataset Description
+
+
+
+
+
+
+
+
+
+
