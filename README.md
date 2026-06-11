@@ -94,7 +94,26 @@ The primary objective is to evaluate logistics performance, customer satisfactio
 | payment_installments | Number of installments used for the payment |
 | payment_value | Total amount paid for the order |
 
-### 
+### products
+| Feature | Description |
+|----------|-------------|
+| product_id | Unique identifier for each product |
+| product_category | Category to which the product belongs |
+| product_name_length | Length of the product name in characters |
+| product_description_length | Length of the product description in characters |
+| product_photos_qty | Number of photos available for the product |
+| product_weight_g | Weight of the product in grams |
+| product_length_cm | Length of the product in centimeters |
+| product_height_cm | Height of the product in centimeters |
+| product_width_cm | Width of the product in centimeters |
+
+### Sellers
+| Feature | Description |
+|----------|-------------|
+| seller_id | Unique identifier for each seller |
+| seller_zip_code_prefix | ZIP code prefix of the seller's location |
+| seller_city | City where the seller is located |
+| seller_state | State where the seller is located |
 
 
 
