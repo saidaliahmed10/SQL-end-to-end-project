@@ -352,6 +352,17 @@ ORDER BY payment_installments;
 ```
 
 
+## 🔑 Key Findings
+
+
+#### These are the top insights extracted from the analysis:
+- 📦 136.98% revenue growth — Total payment value grew from R$3.67M (Jan–Aug 2017) to R$8.69M (Jan–Aug 2018).
+- 🏙️ São Paulo dominates — SP accounts for 13,748 customers, the largest base of any city, followed by Rio de Janeiro (6,090).
+- 🕑 Peak ordering time is afternoon — 38,135 orders were placed between 13:00–18:00; dawn (00:00–06:00) sees the fewest.
+- 🚚 Northern states face delivery delays — Roraima (RR) averages 29 days to delivery; northern states consistently lag due to geographic and infrastructure constraints.
+- 💳 Credit card is the dominant payment method — Usage grew steadily, peaking at 5,674 orders in March 2018; UPI adoption also grew strongly throughout 2018.
+
+
 
 
 
