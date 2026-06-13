@@ -258,6 +258,61 @@ FROM yearly_comparisons;
 ---Percentage increase: 136.98%
 ```
 
+#### What are the average and total price and freight values by customer state?
+
+
+
+# mean & sum of price and freight value by customer state 
+```sql
+select
+c.customer_state,
+avg(price) as avg_price,
+sum(price) as sum_price,
+avg(freight_value) as avg_freight,
+sum(freight_value) as sum_freight
+from orders as o 
+join order_items as oi 
+on o.order_id= oi.order_id
+join customers as c 
+on o.customer_id = c.customer_id
+Group By c.customer_state;
+--- The analysis compares the average and total product prices and freight costs across Brazilian states. 
+--- Results show that customer spending and shipping costs vary considerably by state. 
+--- States such as São Paulo (SP) and Minas Gerais (MG) have the highest total sales and freight values, reflecting their larger customer bases, 
+while some states exhibit higher average freight costs, indicating relatively more expensive shipping per order.
+```
+
+
+#### How can I calculate the number of days between the purchase date, the delivery date, and the estimated delivery date?
+```sql
+SELECT 
+    order_id,
+
+    DATEDIFF(
+        order_delivered_customer_date,
+        order_purchase_timestamp
+    ) AS days_to_delivery,
+
+    DATEDIFF(
+        order_delivered_customer_date,
+        order_estimated_delivery_date
+    ) AS diff_estimated_delivery
+
+FROM orders;
+--- The company generally performs well in meeting delivery expectations, as most orders are delivered earlier than the estimated delivery date. 
+--- However, there is variability in delivery times, with some orders experiencing significant delays. 
+--- This indicates inconsistency in logistics performance and potential areas for optimization in delivery planning and forecasting
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
