@@ -163,15 +163,25 @@ ORDER BY order_number DESC;
 ---The lowest number of orders occurred in September (4,305 orders).
 ---Overall, order activity is higher in mid-year months (May–August) and drops toward the end of the
 ```
+####   During what time of the day , do Brazlians customers mostly place thier orders? (Dawn, morning,afternoon, night)?
+- ##### 0-6 hours- Dawn time 
+- ##### 7-12 hours- morning
+- #####  13-18- Afternoon 
+- ##### 19-23 hours- Night 
 
+```sql
 
+SELECT
+    EXTRACT(hour FROM order_purchase_timestamp) AS time,
+    COUNT(order_id) AS order_number
+FROM orders
+GROUP BY EXTRACT(hour FROM order_purchase_timestamp)
+ORDER BY order_number DESC;
 
+---Most purchases occur during the afternoon (13:00–18:00), with 38,135 orders.
+---Customer activity decreases significantly during the dawn period (00:00–06:00), which records the lowest number of purchases.	
 
-
-	
-
-
-
+```
 
 
 
