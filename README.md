@@ -356,6 +356,34 @@ ORDER BY payment_installments;
 - 💳 Credit card is the dominant payment method — Usage grew steadily, peaking at 5,674 orders in March 2018; UPI adoption also grew strongly throughout 2018.
 
 
+ ## 💡 Recommendations
+
+Based on the analysis findings, the following actions are recommended across four business areas:
+
+#### 🚚 Logistics & Delivery
+
+Prioritize carrier partnerships in the North. States like Roraima (RR), Amapá (AP), and Amazonas (AM) average 25–29 days to delivery. Negotiate regional last-mile carrier agreements or fulfillment centers closer to these states to close the gap.
+Improve estimated delivery accuracy. While most orders arrive on time or early, significant outliers exist. Apply a machine learning model trained on state, product weight, and seller location to generate more reliable estimates — reducing customer disappointment from missed expectations.
+Set seller shipping alerts for high-freight states. Sellers shipping to remote states incur disproportionately high freight costs. An automated warning at checkout can prompt sellers to optimise packaging weight and dimensions.
+
+#### 📈 Revenue & Seasonality
+
+Stock up ahead of the mid-year peak. Order volumes are highest from May through August. Coordinate with top sellers to ensure inventory is replenished by April to avoid stockouts during peak demand.
+Investigate the September–October 2018 drop. The unusually low order counts in that period may reflect a data pipeline issue rather than a real decline. Confirm data completeness before using those months in any forecasting model.
+Run targeted promotions in Q1. January–March shows lower order volumes compared to mid-year. Time discount campaigns and free-shipping offers to stimulate demand during this slower period.
+
+#### 💳 Payments & Customer Behaviour
+
+Double down on UPI adoption. UPI grew from 63 monthly orders in late 2016 to over 1,500 by early 2018 — the steepest growth of any payment method. Offering a small UPI-exclusive discount could accelerate adoption further and reduce credit card processing fees.
+Optimise the installment experience. A significant share of customers use multi-installment payments, which is common in Brazil. Consider offering interest-free installments up to 6× for orders above a certain threshold to increase average order value.
+Reduce voucher drop-off. Voucher usage is consistent but flat (100–300 orders/month). A/B test personalised voucher targeting — sending codes to customers who haven't ordered in 60+ days — to convert them into repeat buyers.
+
+#### 🏙️ Geographic Expansion
+
+Focus marketing spend on São Paulo and Rio de Janeiro. These two cities represent the bulk of the customer base. Retention campaigns (loyalty programmes, personalised recommendations) will yield the highest ROI in these markets.
+Identify underpenetrated states with high purchasing power. States outside the Southeast with above-average order values but low customer counts are prime targets for localised marketing campaigns and seller recruitment drives.
+
+
 
 
 
