@@ -304,7 +304,22 @@ FROM orders;
 --- This indicates inconsistency in logistics performance and potential areas for optimization in delivery planning and forecasting
 ```
 
+#### What are the top five states with the highest and lowest average freight values?
+```sql
+SELECT 
+    c.customer_state, 
+    AVG(DATEDIFF(o.order_delivered_customer_date, o.order_purchase_timestamp)) AS avg_time_to_delivery
+FROM orders AS o
+JOIN customers AS c
+    ON o.customer_id = c.customer_id
+GROUP BY c.customer_state
+ORDER BY avg_time_to_delivery DESC
+LIMIT 5;
 
+--- Roraima (RR) has the longest average delivery time at 29 days, indicating potential logistics challenges.
+--- States in the Northern region (RR, AP, AM, PA) generally experience slower delivery times.
+--- This suggests that geographical distance and infrastructure limitations significantly impact delivery speed.
+```
 
 
 
