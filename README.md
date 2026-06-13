@@ -13,23 +13,16 @@ The primary objective is to evaluate logistics performance, customer satisfactio
 - Customer Insights: Segment the customer base to understand regional purchasing power and correlate payment methods with order value.
 - Operational Efficiency: Utilize advanced SQL techniques, including complex joins and window functions, to transform raw transactional data into data-driven recommendations that inform strategic decision-making.
 
-## 🔍 Key Business Questions Answered
+## 🔍 Key Business Questions
 
-- Temporal Trends: What is the order volume growth month-over-month and year-over-year?
-
-- Customer Behavior: At what time of day do Brazilian customers most frequently place their orders (Dawn, Morning, Afternoon, or Night)?
-
-- Geographic Distribution: How are customers distributed across different states and cities in Brazil?
-
-- Revenue Growth: What is the percentage increase in total payment value comparing 2017 to 2018 (January–August period)?
-
-- Logistics Performance: What is the average time between order purchase and delivery, and how does it compare to the estimated delivery date?
-
-- Regional Logistics: Which states experience the highest and lowest average freight costs?
-
-- Financial Insights: How does the preference for payment methods (e.g., credit card, boleto) shift month-over-month?
-
-- Installment Analysis: What is the distribution of orders based on the number of payment installments selected by customers?
+- What is the order volume growth month-over-month and year-over-year?
+- At what time of day do Brazilian customers most frequently place orders?
+- How are customers distributed across states and cities in Brazil?
+- What is the percentage increase in total payment value from 2017 to 2018 (Jan–Aug)?
+- What is the average time between order purchase and delivery vs. estimated delivery date?
+-Which states experience the highest and lowest average freight costs?
+- How does payment method preference shift month-over-month?
+-What is the distribution of orders by number of payment installments?
 
 ## 📄 Dataset Dataset Features
 ### Customers
