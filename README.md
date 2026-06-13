@@ -321,10 +321,26 @@ LIMIT 5;
 --- This suggests that geographical distance and infrastructure limitations significantly impact delivery speed.
 ```
 
+```sql
+SELECT 
+    p.payment_type, 
+    EXTRACT(YEAR FROM o.order_purchase_timestamp) AS year,
+    EXTRACT(MONTH FROM o.order_purchase_timestamp) AS month,
+    COUNT(DISTINCT o.order_id) AS order_count
+FROM orders AS o 
+INNER JOIN payments AS p
+    ON o.order_id = p.order_id 
+GROUP BY p.payment_type, year, month 
+ORDER BY p.payment_type, year, month desc;
+--- Credit Card: Remains the dominant payment method throughout the entire period. It shows significant growth from late 2016, peaking in March 2018 (5,674 orders).
 
+--- UPI: Shows impressive adoption and steady growth. Starting from 63 orders in October 2016, it grew rapidly to exceed 1,000 monthly orders by mid-2018, reaching a peak of 1,518 in January 2018.
 
+--- Voucher: Usage is consistently present, typically ranging between 100 and 300 orders per month, with a notable peak of 304 in January 2018.
 
+--- Debit Card: Shows the lowest volume among major methods, generally maintaining a steady, albeit smaller, footprint compared to credit cards and UPI.
 
+```
 
 
 
