@@ -339,8 +339,18 @@ ORDER BY p.payment_type, year, month desc;
 --- Voucher: Usage is consistently present, typically ranging between 100 and 300 orders per month, with a notable peak of 304 in January 2018.
 
 --- Debit Card: Shows the lowest volume among major methods, generally maintaining a steady, albeit smaller, footprint compared to credit cards and UPI.
-
 ```
+#### count of ordres based on th number of pyment installments 
+```sql
+
+SELECT 
+    payment_installments,
+    COUNT(DISTINCT order_id) AS number_orders 
+FROM payments 
+GROUP BY payment_installments
+ORDER BY payment_installments; 
+```
+
 
 
 
