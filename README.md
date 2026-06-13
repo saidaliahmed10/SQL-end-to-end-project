@@ -201,6 +201,64 @@ and remained consistently high during most of 2018.
 
 ```
 
+#### What is the distribution of customers across the states of Brazil?
+```sql
+select customer_city,customer_state,
+count(Distinct customer_id) as customer_count 
+from customers
+group by customer_city, customer_state
+order by customer_count desc;
+--- São Paulo (SP) has the largest customer base with 13,748 customers, followed by Rio de Janeiro (RJ) with 6,090 customers.
+--- Other major customer hubs include Belo Horizonte (MG) (2,426 customers), Brasília (DF) (1,889 customers), and Curitiba (PR) (1,340 customers).
+--- The majority of high-customer cities are concentrated in the Southeast region of Brazil, particularly in the state of São Paulo (SP).
+--- This indicates that customer demand is highly concentrated in Brazil's largest metropolitan areas.
+
+```
+
+#### What was the percentage increase in the total cost of orders from 2017 to 2018 (considering only orders placed between January and August)?
+
+-  Get the % increase in the cost of ordres from year 2017 to 2018(iclude months Bw Jan and Augst only) 
+- we can use the "pyment_vlue") column in the pyment table to get the cost of orders
+- step one: calculate the total pyments per year 
+```sql
+WITH yearly_totals AS (
+    SELECT
+        EXTRACT(YEAR FROM o.order_purchase_timestamp) AS year,
+        SUM(p.payment_value) AS total_payment
+    FROM payments AS p
+    JOIN orders AS o
+        ON p.order_id = o.order_id
+    WHERE EXTRACT(YEAR FROM o.order_purchase_timestamp) IN (2017, 2018)
+      AND EXTRACT(MONTH FROM o.order_purchase_timestamp) BETWEEN 1 AND 8
+    GROUP BY EXTRACT(YEAR FROM o.order_purchase_timestamp)
+),
+
+- Step 2: Use LEAD window function to compare each year's payments with the previous year
+yearly_comparisons AS (
+```sql
+SELECT
+        year,
+        total_payment,
+        LEAD(total_payment) OVER (ORDER BY year DESC) AS previous_year_payment
+    FROM yearly_totals
+)
+```
+- Step 3: Calculate percentage increase
+```sql
+SELECT
+    year,
+    total_payment,
+    previous_year_payment,
+    ((total_payment - previous_year_payment)
+      / previous_year_payment) * 100 AS percentage_increase
+FROM yearly_comparisons;
+
+--- 2017 (Jan–Aug): Total payments = 3,669,022.12
+--- 2018 (Jan–Aug): Total payments = 8,694,733.84
+---Percentage increase: 136.98%
+```
+
+
 
 
 
