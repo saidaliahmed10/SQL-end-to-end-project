@@ -182,6 +182,26 @@ ORDER BY order_number DESC;
 ---Customer activity decreases significantly during the dawn period (00:00–06:00), which records the lowest number of purchases.	
 
 ```
+#### What is the month-over-month number of orders?
+```sql
+SELECT
+    EXTRACT(YEAR FROM order_purchase_timestamp) AS year,
+    EXTRACT(MONTH FROM order_purchase_timestamp) AS month,
+    COUNT(*) AS numb_orders
+FROM orders
+GROUP BY
+    EXTRACT(YEAR FROM order_purchase_timestamp),
+    EXTRACT(MONTH FROM order_purchase_timestamp)
+ORDER BY
+    year, month DESC;
+
+--- Order volumes increased steadily from 2016 to 2018. Sales were very low in 2016, grew significantly throughout 2017, 
+and remained consistently high during most of 2018. 
+---- The unusually low order counts in September and October 2018 likely reflect incomplete data rather than a real decrease in demand.
+
+```
+
+
 
 
 
